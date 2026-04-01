@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>TaskFlow | Smart Task Manager Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <h1>TaskFlow Dashboard</h1>
+            <div class="sub">manage, track & organize — all in one place</div>
+        </div>
+        <div class="content">
+            <!-- Add Task Section -->
+            <div class="input-group">
+                <div class="task-input-wrapper">
+                    <input type="text" id="taskNameInput" placeholder="Write a new task... e.g., 'Finish internship report'" autocomplete="off">
+                </div>
+                <button class="btn-primary" id="addTaskBtn">+ Add Task</button>
+            </div>
+
+            <!-- Search + Filter Controls -->
+            <div class="search-filter-bar">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="searchTaskInput" placeholder="Search tasks by name...">
+                </div>
+                <div class="filter-group" id="filterGroup">
+                    <button data-filter="all" class="filter-btn active">📋 All</button>
+                    <button data-filter="pending" class="filter-btn">⏳ Pending</button>
+                    <button data-filter="completed" class="filter-btn">✅ Completed</button>
+                </div>
+            </div>
+
+            <!-- Stats & Clear All -->
+            <div class="task-stats">
+                <span id="taskCounter">📌 0 tasks</span>
+                <button id="clearAllTasksBtn" class="clear-all-btn">🗑️ Clear all tasks</button>
+            </div>
+
+            <!-- Dynamic Task List -->
+            <div class="task-list-container">
+                <ul class="task-list" id="taskList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
